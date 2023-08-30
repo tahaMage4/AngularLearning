@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ margin-inline: 20px;
+  .content {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+
