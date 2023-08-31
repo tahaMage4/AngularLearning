@@ -1,0 +1,23 @@
+<!-- <ul *ngFor="let todo of todos">
+  <li>{{todo.title}}</li>
+</ul> -->
+
+<!-- New Way  -->
+<app-add-todo (todoAdd)="addTodo($event)"></app-add-todo>
+
+
+<!--* Type the Condition  on if/else condition  -->
+<div *ngIf="this.todos.length === 0; else elseBlock">No Todos Finds</div>
+<ng-template #elseBlock>
+
+
+<div  *ngFor="let todo of todos; index as i">
+  <app-todo-item [todo]="todo" [i]="i" (todoDelete)="deleteTodo($event)"
+  (todoChecked)="toggleTodo($event)"> </app-todo-item>
+</div>
+
+</ng-template>
+
+
+
+<!-- ngFor is use for (for loop or array of map) -->

@@ -1,0 +1,31 @@
+<!-- <form class="mt-5"  #addtodo="ngForm"  (ngSubmit)="OnSubmit(addtodo.value)">
+  <div class="mb-3 " >
+    <label for="exampleInputEmail1" class="form-label">Title</label>
+    <input type="text" class="form-control"  ngModel name="title">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Description</label>
+    <input type="password" class="form-control"  ngModel name="desc">
+  </div>
+  <button type="submit" class="btn btn-primary">Add Todo</button>
+</form> -->
+
+
+<div class="my-3">
+<h4>Add a Todo</h4>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Todo Title</label>
+      <input type="text" [(ngModel)]="title" class="form-control" id="title" name="title" >
+    </div>
+    <div class="form-group">
+      <label for="desc">Todo Description</label>
+      <input type="text" class="form-control" name="desc" id="desc" [(ngModel)]="desc">
+    </div>
+    <div class="form-group">
+      <label for="desc">Todo Name</label>
+      <input type="text" class="form-control" name="name" id="name" [(ngModel)]="name">
+    </div>
+    <button type="submit" class="btn btn-sm btn-primary">Add Todo</button>
+  </form></div>

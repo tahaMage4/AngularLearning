@@ -1,0 +1,20 @@
+<h1 [ngClass]="{'strike': !todo.active}">{{todo.title}}</h1>
+<h3  [ngClass]="{'strike': !todo.active}">{{todo.name}}</h3>
+<p style="font-weight: bolder;"  [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
+<div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="todo{{i}}"
+    (click)="OnChecked(todo)"
+    [checked]="!todo.active"
+    >
+    <label class="form-check-label" for="checked{{i}}">
+<!-- <div *ngIf="this.todos.length === 0; else elseBlock">No Todos Finds</div>
+<ng-template #elseBlock> -->
+      Toggle Done
+    </label>
+  </div>
+<button (click)="DelteTodoItem(todo)">delete</button>
+
+
+<!--? ternaory Oprator  -->
+<!-- [class]="'nostrike'?todo.active:'strike'" -->
+
