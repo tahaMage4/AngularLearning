@@ -4,7 +4,7 @@ ng g c [CompontentName] # generate the compontent
 ng generate interface [interfaceName] # generate the interface
 ng generate service [serviceName]# generate the service of the given compontent
 ng g  service Services/[ServiceName] # generate the service in thew seperate folder of the given compontent name
-ng build --prod # for production build
+ng build --prod  --aot # for production build & checking the error --aot
 
 ng generate interceptor loading # dont no fill waqt
 

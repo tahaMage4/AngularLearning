@@ -16,8 +16,7 @@ RUN rm -rf package-lock.json
 # COPY package*.json ./  &&  package.json package-lock.json\* ./
 COPY  package*.json ./
 
-# Install Angular CLI globally
-RUN npm install -g @angular/cli
+
 
 # Install project dependencies
 RUN npm install
@@ -27,12 +26,12 @@ COPY . .
 
 # Build the Angular app for production
 # RUN npm run build
-# RUN ng build --prod --aot
+RUN npm build
 
 
 # Expose the port your Angular app will run on (default is 80)
 EXPOSE 4200
 
 # Define the command to start the Angular app
-CMD [ "ng", "serve", "--host" ]
+CMD [ "npm", "start", "--host" ]
 
