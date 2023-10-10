@@ -26,7 +26,7 @@ COPY . .
 
 # Build the Angular app for production
 # RUN npm run build
-RUN npm build
+RUN npm run build
 
 
 # Expose the port your Angular app will run on (default is 80)
