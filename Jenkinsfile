@@ -7,15 +7,10 @@ pipeline {
                 git url : "https://github.com/tahaMage4/AngularLearning.git", branch: "main"
             }
         }
-        stage('Build the Docker') {
+        stage('Build & Deploy the Docker') {
             steps {
-                echo "Build the docker Image"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo "Deploy the Container"
-                sh "docker compose down && docker compose up -d"
+                echo "Build & Deploy the Docker"
+                sh "docker compose down && docker compose up"
             }
         }
     }
