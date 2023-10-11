@@ -10,8 +10,8 @@ pipeline {
         stage('Run Locally') {
             steps {
                 echo "Run Locally"
-                sh "sudo apt update"
-                sh "sudo apt install nodejs"
+                sh "apt update"
+                sh "apt install nodejs"
                 sh "node -v"
                 sh "npm -v"
             }
