@@ -7,6 +7,15 @@ pipeline {
                 git url : "https://github.com/tahaMage4/AngularLearning.git", branch: "main"
             }
         }
+        stage('Run Locally') {
+            steps {
+                echo "Run Locally"
+                sh "sudo apt update"
+                sh "sudo apt install nodejs"
+                sh "node -v"
+                sh "npm -v"
+            }
+        }
         stage('Build & Deploy the Docker') {
             steps {
                 echo "Build & Deploy the Docker"
