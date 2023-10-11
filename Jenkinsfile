@@ -4,7 +4,10 @@ pipeline {
         stage('Clone Code') {
             steps {
                 echo "Clone the project"
-                git url : "https://github.com/tahaMage4/AngularLearning.git", branch: "main"
+                // git url : "https://github.com/tahaMage4/AngularLearning.git", branch: "main"
+                git credentialsId: 'github_token',
+                url: 'https://github.com/mage4m/stntsoll.git',
+                branch: 'main'
             }
         }
         // stage('Run Locally') {
